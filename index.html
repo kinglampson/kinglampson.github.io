@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* Common CSS styles for gallery */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: url(blurry11.jpg) no-repeat center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure full height of the viewport */
+}
+
+.hero-text {
+  text-align: center;
+  margin-bottom: auto; /* Pushes the hero-text to the top */
+}
+
+.hero-text h1 {
+  font-size: 60px;
+  font-weight: bold; /* Made the text bolder */
+  color: #fdd835; /* Changed color to a brighter shade */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Added text shadow */
+}
+
+.hero-text p {
+  font-weight: bold; /* Made the text bolder */
+  color: #fdd835; /* Changed color to a brighter shade */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Added text shadow */
+}
+
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  margin-top: auto; /* Pushes the galleries to the bottom */
+}
+
+div.gallery {
+  border: 1px solid #ccc;
+  width: 150px; /* Reduced width for the gallery */
+  height: 150px; /* Reduced height for the gallery */
+  margin: 10px; /* Added margin for spacing */
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 10px;
+  text-align: center;
+  font-weight: bold; /* Made the text bolder */
+  color: black; /* Changed text color to bold black */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Added text shadow */
+}
+
+/* Responsive layout */
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 3px;
+  flex: 0 0 25%; /* Equal width for each gallery on larger screens */
+}
+
+@media only screen and (max-width: 600px) {
+  .responsive {
+    flex: 0 0 50%; /* Half width for each gallery on smaller screens */
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .responsive {
+    flex: 0 0 100%; /* Full width for each gallery on even smaller screens */
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Animating "Welcome to Julia Cat Shop" */
+.welcome {
+  width: 100%;
+  height: 50px;
+  background-color: pink;
+  font-weight: bold;
+  position: absolute;
+  top: 20px; /* Position at the top of the page */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  text-align: center;
+  font-size: 24px; /* Increased font size */
+  text-transform: uppercase; /* Made the text uppercase */
+  animation: mymove 4s infinite alternate; /* Adjusted animation properties */
+}
+
+@keyframes mymove {
+  0% {top: 20px;} /* Initial position at the top of the page */
+  50% {top: 40px;} /* Move down slightly */
+  100% {top: 20px;} /* Return to the initial position */
+}
+
+/* Animating divs with different timing functions */
+.animation-div {
+  display: none; /* Removed the animated div */
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+</style>
+</head>
+<body>
+
+<div class="welcome" id="div1">Welcome To Julia Cat Shop</div>
+
+<div class="hero-text">  
+  <h1 style="font-size:50px">Julia's Cat Shop</h1>  
+  <h1>Seller of Adorable Cats</h1>  
+  <a href="register_form.html"><button>Click to Register</button></a> <!-- Added link to register form page -->
+</div>
+
+<h2><a href="jumpingcat.html" style="text-decoration: none; color: inherit;">Click Here for a suprise</a></h2> <jumpingcat.htm>
+
+<div class="gallery-container">
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="cat1.jpg">
+        <img src="cat1.jpg" alt="cat one">
+      </a>
+      <div class="desc">Price: $69, Terry is 1 month old</div>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="cat2.jpg">
+        <img src="cat2.jpg" alt="cat two">
+      </a>
+      <div class="desc">Price: $95, Daina is 3 months old</div>
+    </div>
+  </div>
+
+<div class="responsive">
+    <div class="gallery">
+<a target="_blank" href="cat3.jpg">
+        <img src="cat3.jpg" alt="cat three">
+      </a>
+<div class="desc">Price: $100, Japphet is 4 months old</div>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="cat4.jpg">
+        <img src="cat4.jpg" alt="cat four">
+      </a>
+      <div class="desc">Price: $78, Max is 3 years old and does not like milk</div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
