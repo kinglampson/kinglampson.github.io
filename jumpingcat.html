@@ -1,10 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Admin Profiles</title>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.profile-card {
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  text-align: center;
+}
+
+.profile-card img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.profile-card h2 {
+  margin: 10px 0;
+  font-size: 22px;
+  color: #333333;
+}
+
+.profile-card p {
+  color: #777777;
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.profile-card a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.profile-card a:hover {
+  background-color: #45a049;
+}
+
+.profile-card .work {
+  font-weight: bold;
+  color: #333333;
+}
+</style>
+</head>
 <body>
 
+<div class="profile-card">
+  <img src="Admin1.jpg" alt="Julia Zobtsova">
+  <h2>Julia Zobtsova</h2>
+  <p>Email: <a href="mailto:JuliaZubs@gmail.com">JuliaZubs@gmail.com</a></p>
+  <p class="work">Work: Interpreter and Cat lover</p>
+</div>
 
-<img src="jumpingcuteface.gif" alt="Computer man" style="width:1000px;height:1000px;">
+<div class="profile-card">
+  <img src="Admin2.jpg" alt="Terhide Imenger">
+  <h2>Terhide Imenger</h2>
+  <p>Email: <a href="mailto:terhideimenger@example.com">terhideimenger@example.com</a></p>
+  <p class="work">Work: Survey Engineer</p>
+</div>
 
 </body>
 </html>
-
