@@ -7,17 +7,46 @@
 <style>
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #f2f2f2;
+  background: url('admin_background.jpg') no-repeat center center fixed;
+  background-size: cover;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   min-height: 100vh;
   margin: 0;
 }
 
+.sidebar {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  padding-top: 20px;
+}
+
+.sidebar a {
+  padding: 15px 25px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #575757;
+}
+
+.main-content {
+  margin-left: 200px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .profile-card {
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 20px;
   margin: 20px;
   border-radius: 15px;
@@ -34,12 +63,21 @@ body {
 
 .profile-card h2 {
   margin: 10px 0;
-  font-size: 22px;
-  color: #333333;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  font-family: 'Cursive', Arial, Helvetica, sans-serif;
+}
+
+.profile-card h3 {
+  margin: 5px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #666;
 }
 
 .profile-card p {
-  color: #777777;
+  color: #555;
   font-size: 16px;
   margin: 5px 0;
 }
@@ -59,26 +97,42 @@ body {
   background-color: #45a049;
 }
 
-.profile-card .work {
+.profile-card .contact-info {
   font-weight: bold;
-  color: #333333;
+  color: #333;
 }
 </style>
 </head>
 <body>
 
-<div class="profile-card">
-  <img src="Admin1.jpg" alt="Julia Zobtsova">
-  <h2>Julia Zobtsova</h2>
-  <p>Email: <a href="mailto:JuliaZubs@gmail.com">JuliaZubs@gmail.com</a></p>
-  <p class="work">Work: Interpreter and Cat lover</p>
+<div class="sidebar">
+  <a href="#">Dashboard</a>
+  <a href="#">Projects</a>
+  <a href="#">Tenants</a>
+  <a href="#">Finance</a>
+  <a href="#">ToDo List</a>
 </div>
 
-<div class="profile-card">
-  <img src="Admin2.jpg" alt="Terhide Imenger">
-  <h2>Terhide Imenger</h2>
-  <p>Email: <a href="mailto:terhideimenger@example.com">terhideimenger@example.com</a></p>
-  <p class="work">Work: Survey Engineer</p>
+<div class="main-content">
+  <div class="profile-card">
+    <img src="Admin1.jpg" alt="Julia">
+    <h2>Julia</h2>
+    <h3>Interpreter</h3>
+    <p>Email: <a href="mailto:JuliaZubs@gmail.com">JuliaZubs@gmail.com</a></p>
+    <p class="contact-info">Phone: +34799399337</p>
+    <p class="contact-info">Teams: <a href="http://link_to_teams" target="_blank">Link to Teams</a></p>
+    <p class="contact-info">Country: Russia</p>
+  </div>
+
+  <div class="profile-card">
+    <img src="Admin2.jpg" alt="Terhide">
+    <h2>Terhide</h2>
+    <h3>Survey Engineer</h3>
+    <p>Email: <a href="mailto:lampsonimenger@gmail.com">lampsonimenger@gmail.com</a></p>
+    <p class="contact-info">Phone: +8619549506755</p>
+    <p class="contact-info">Teams: <a href="http://link_uiosna" target="_blank">Link to Teams</a></p>
+    <p class="contact-info">Country: Nigeria</p>
+  </div>
 </div>
 
 </body>
