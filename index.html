@@ -7,16 +7,30 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: url(blackcathomepage.mp4) no-repeat center;
-  background-size: cover;
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Ensure full height of the viewport */
+  overflow: hidden; /* Prevent scrollbars from appearing */
+}
+
+video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  background-size: cover;
+  transition: 1s opacity;
 }
 
 .hero-text {
   text-align: center;
   margin-bottom: auto; /* Pushes the hero-text to the top */
+  z-index: 1; /* Ensure text is above the video */
 }
 
 .hero-text h1 {
@@ -36,6 +50,7 @@ body {
   display: flex;
   justify-content: center;
   margin-top: auto; /* Pushes the galleries to the bottom */
+  z-index: 1; /* Ensure galleries are above the video */
 }
 
 div.gallery {
@@ -104,6 +119,7 @@ div.desc {
   font-size: 24px; /* Increased font size */
   text-transform: uppercase; /* Made the text uppercase */
   animation: mymove 4s infinite alternate; /* Adjusted animation properties */
+  z-index: 1; /* Ensure welcome message is above the video */
 }
 
 @keyframes mymove {
@@ -124,6 +140,7 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  z-index: 1; /* Ensure button is above the video */
 }
 
 button:hover {
@@ -134,6 +151,11 @@ button:hover {
 </head>
 <body>
 
+<video autoplay muted loop id="bg-video">
+  <source src="blackcathomepage.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
 <div class="welcome" id="div1">Welcome To Julia Cat Shop</div>
 
 <div class="hero-text">  
@@ -142,7 +164,8 @@ button:hover {
   <a href="register_form.html"><button>Click to Register</button></a> <!-- Added link to register form page -->
 </div>
 
-<h2><a href="jumpingcat.html" style="text-decoration: none; color: inherit;">Click Here for a suprise</a></h2> <jumpingcat.htm>
+<h2><a href="jumpingcat.
+   html" style="text-decoration: none; color: inherit;">Click Here for a suprise</a></h2> <jumpingcat.htm>
 
 <div class="gallery-container">
 
@@ -185,4 +208,9 @@ button:hover {
 </div>
 
 </body>
-</html>
+</html>   
+ 
+
+
+
+ 
